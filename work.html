@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work - Joe Staton</title>
+    <meta name="description" content="Explore my journalism portfolio.">
+    <meta property="og:title" content="My Work - Joe Staton">
+    <meta property="og:description" content="Explore my journalism portfolio.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://yourdomain.com/work.html">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Joe Staton</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+    <main>
+        <section class="work" data-aos="fade-up">
+            <h2>My Work</h2>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search articles...">
+            </div>
+            <div class="filters">
+                <button data-filter="all" class="active">All</button>
+                <button data-filter="investigative">Investigative</button>
+                <button data-filter="features">Features</button>
+            </div>
+            <div class="grid" id="article-grid">
+                <div class="article-card" data-category="investigative">
+                    <img src="images/featured.jpg" alt="Article">
+                    <h3>Investigative Report on Urban Development</h3>
+                    <p>Publication Date: January 1, 2023</p>
+                    <p>An in-depth look at urban planning challenges...</p>
+                    <a href="https://example.com" target="_blank" class="btn">Read More</a>
+                </div>
+                <div class="article-card" data-category="features">
+                    <img src="images/article1.jpg" alt="Article">
+                    <h3>Feature Story: Community Voices</h3>
+                    <p>Publication Date: December 15, 2022</p>
+                    <p>Highlighting local heroes...</p>
+                    <a href="https://example.com" target="_blank" class="btn">Read More</a>
+                </div>
+                <div class="article-card" data-category="investigative">
+                    <img src="images/article2.jpg" alt="Article">
+                    <h3>Investigative Piece: Corruption Exposed</h3>
+                    <p>Publication Date: November 10, 2022</p>
+                    <p>Uncovering hidden truths...</p>
+                    <a href="https://example.com" target="_blank" class="btn">Read More</a>
+                </div>
+                <div class="article-card" data-category="features">
+                    <img src="images/article3.jpg" alt="Article">
+                    <h3>Profile: A Day in the Life</h3>
+                    <p>Publication Date: October 5, 2022</p>
+                    <p>A personal story...</p>
+                    <a href="https://example.com" target="_blank" class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Joe Staton. All rights reserved.</p>
+    </footer>
+    <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
