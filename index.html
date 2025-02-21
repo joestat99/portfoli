@@ -3,208 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Joe Staton, a journalist and writer.">
     <title>Joe Staton - Journalism Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=New+Spirit&display=swap" rel="stylesheet">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'New Spirit', serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-
-        /* Header Styles */
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-        header p {
-            font-size: 1.2em;
-            color: #666;
-        }
-
-        /* Navigation Styles */
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #007bff;
-        }
-
-        /* Section Headings */
-        h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        /* Featured Articles Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .article-card {
-            background: #fff;
-            border: 1px solid #ddd;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            transition: box-shadow 0.3s ease;
-        }
-        .article-card:hover {
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .article-card img {
-            width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
-        .article-card h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        .article-card p {
-            font-size: 1em;
-            color: #555;
-        }
-
-        /* Links */
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* About Section */
-        #about img {
-            float: left;
-            width: 200px;
-            height: auto;
-            margin-right: 20px;
-            border-radius: 5px;
-        }
-        #about::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Contact Section */
-        #contact {
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            border-top: 1px solid #ddd;
-            color: #666;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-            }
-            header h1 {
-                font-size: 2.5em;
-            }
-            h2 {
-                font-size: 1.8em;
-            }
-            .article-card h3 {
-                font-size: 1.3em;
-            }
-            nav li {
-                display: block;
-                margin: 10px 0;
-            }
-            #about img {
-                float: none;
-                margin: 0 auto 20px;
-                display: block;
-            }
-        }
-    </style>
+    <meta name="description" content="Portfolio of Joe Staton, a journalist and writer.">
+    <meta property="og:title" content="Joe Staton - Journalism Portfolio">
+    <meta property="og:description" content="Explore the journalism work of Joe Staton.">
+    <meta property="og:image" content="images/og-image.jpg">
+    <meta property="og:url" content="https://yourdomain.com">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <h1>Joe Staton</h1>
-        <p>Journalist & Writer</p>
         <nav>
+            <div class="logo">Joe Staton</div>
             <ul>
-                <li><a href="#featured">Work</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
         </nav>
     </header>
-
-    <!-- Featured Articles Section -->
-    <section id="featured">
-        <h2>Featured Work</h2>
-        <div class="grid">
-            <article class="article-card">
-                <img src="article1.jpg" alt="Article 1">
-                <h3>Breaking News Story</h3>
-                <p>A deep dive into a major event that shaped the headlines.</p>
-                <a href="#">Read More</a>
-            </article>
-            <article class="article-card">
-                <img src="article2.jpg" alt="Article 2">
-                <h3>Investigative Report</h3>
-                <p>Uncovering the truth behind a complex issue.</p>
-                <a href="#">Read More</a>
-            </article>
-            <article class="article-card">
-                <img src="article3.jpg" alt="Article 3">
-                <h3>Feature Profile</h3>
-                <p>A compelling story about an influential figure.</p>
-                <a href="#">Read More</a>
-            </article>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <img src="joe.jpg" alt="Joe Staton">
-        <p>Joe Staton is an experienced journalist with a passion for storytelling and a commitment to uncovering the truth. With years of experience in the field, Joe has contributed to numerous publications, delivering impactful news and feature stories.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:realjoestaton@gmail.com">realjoestaton@gmail.com</a></p>
-    </section>
-
-    <!-- Footer -->
+    <main>
+        <section class="hero" data-aos="fade-in">
+            <div class="hero-content">
+                <h1>Joe Staton: Uncovering Stories That Matter</h1>
+                <p>Award-winning journalist with a passion for truth and storytelling.</p>
+            </div>
+        </section>
+        <section class="featured-article" data-aos="fade-up">
+            <h2>Featured Article</h2>
+            <div class="article-card large">
+                <img src="images/featured.jpg" alt="Featured Article">
+                <div class="content">
+                    <h3>Investigative Report on Urban Development</h3>
+                    <p>Publication Date: January 1, 2023</p>
+                    <p>An in-depth look at urban planning challenges...</p>
+                    <a href="https://example.com" target="_blank" class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
+        <section class="recent-work" data-aos="fade-up">
+            <h2>Recent Work</h2>
+            <div class="grid">
+                <div class="article-card">
+                    <img src="images/article1.jpg" alt="Article 1">
+                    <h3>Feature Story: Community Voices</h3>
+                    <p>Publication Date: December 15, 2022</p>
+                    <p>Highlighting local heroes...</p>
+                    <a href="https://example.com" target="_blank" class="btn">Read More</a>
+                </div>
+                <div class="article-card">
+                    <img src="images/article2.jpg" alt="Article 2">
+                    <h3>Investigative Piece: Corruption Exposed</h3>
+                    <p>Publication Date: November 10, 2022</p>
+                    <p>Uncovering hidden truths...</p>
+                    <a href="https://example.com" target="_blank" class="btn">Read More</a>
+                </div>
+                <div class="article-card">
+                    <img src="images/article3.jpg" alt="Article 3">
+                    <h3>Profile: A Day in the Life</h3>
+                    <p>Publication Date: October 5, 2022</p>
+                    <p>A personal story...</p>
+                    <a href="https://example.com" target="_blank" class="btn">Read More</a>
+                </div>
+            </div>
+            <a href="work.html" class="btn">See All Work</a>
+        </section>
+        <section class="about" data-aos="fade-up">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="images/joe.jpg" alt="Joe Staton">
+                <p>Joe Staton is an experienced journalist with over 10 years in the field, specializing in investigative reporting and feature writing. His work has been published in major outlets like The New York Times and The Washington Post.</p>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>© 2023 Joe Staton. All rights reserved.</p>
+        <p>&copy; 2023 Joe Staton. All rights reserved.</p>
     </footer>
+    <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
