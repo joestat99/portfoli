@@ -1,0 +1,324 @@
+/* CSS Variables */
+:root {
+    --primary-color: #003366;       /* Deep blue */
+    --accent-color: #FF6600;        /* Vibrant orange */
+    --accent-color-dark: #CC5200;   /* Darker orange for hover */
+    --background-color: #F9F9F9;    /* Light gray */
+    --text-color: #333;             /* Dark gray */
+    --font-headline: 'Newsreader', serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --background-color: #222;
+    --text-color: #fff;
+    --primary-color: #6699CC; /* Lighter blue */
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-headline);
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 80vh;
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Article Cards */
+.article-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.article-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.article-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.article-card p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Featured Article */
+.featured-article .article-card.large {
+    display: flex;
+    align-items: center;
+}
+
+.featured-article .article-card img {
+    width: 50%;
+    margin-right: 2rem;
+}
+
+.featured-article .article-card .content {
+    width: 50%;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: var(--accent-color-dark);
+}
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-content img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Work Page */
+.search-bar {
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.filters {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.filters button {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filters button.active {
+    background-color: var(--accent-color);
+}
+
+/* Contact Page */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form textarea {
+    height: 150px;
+}
+
+.details {
+    text-align: center;
+}
+
+.details a {
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Back to Top */
+#back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .featured-article .article-card.large {
+        flex-direction: column;
+    }
+    .featured-article .article-card img,
+    .featured-article .article-card .content {
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .about-content img {
+        width: 100%;
+    }
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
